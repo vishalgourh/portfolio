@@ -3,124 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vishal Gourh | AI & SaaS Visionary</title>
+    <title>Vishal Gourh | AI & SaaS Architect</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        :root { --ios-blue: #007AFF; --bg: #000; --glass: rgba(255, 255, 255, 0.03); }
-        body { background-color: var(--bg); color: white; font-family: -apple-system, sans-serif; overflow-x: hidden; cursor: none; }
+        :root { --ios-blue: #007AFF; --bg: #000; }
+        body { background: var(--bg); color: white; font-family: -apple-system, sans-serif; overflow-x: hidden; cursor: none; }
         
-        /* Interactive Cursor */
-        #cursor { width: 10px; height: 10px; background: #fff; border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; mix-blend-mode: difference; transition: transform 0.1s; }
-        #cursor-blur { width: 400px; height: 400px; background: radial-gradient(circle, rgba(0,122,255,0.1) 0%, transparent 70%); position: fixed; pointer-events: none; z-index: -1; border-radius: 50%; }
+        /* Cursor System */
+        #cursor { width: 10px; height: 10px; background: #fff; border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; mix-blend-mode: difference; }
+        #glow { position: fixed; width: 600px; height: 600px; background: radial-gradient(circle, rgba(0,122,255,0.1) 0%, transparent 70%); border-radius: 50%; z-index: -1; pointer-events: none; }
 
-        /* Premium Components */
-        .glass-card { background: var(--glass); backdrop-filter: blur(25px); border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1); }
-        .glass-card:hover { transform: translateY(-12px) scale(1.02); border-color: var(--ios-blue); background: rgba(255,255,255,0.06); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        /* Glassmorphism 2.0 */
+        .glass-card { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(30px); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 20px; transition: 0.4s cubic-bezier(0.2, 0.8, 0.2, 1); }
+        .glass-card:hover { border-color: var(--ios-blue); transform: translateY(-5px); background: rgba(255, 255, 255, 0.05); }
         
-        .gradient-text { background: linear-gradient(135deg, #fff 40%, #007AFF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .status-dot { width: 8px; height: 8px; background: #34d399; border-radius: 50%; display: inline-block; box-shadow: 0 0 10px #34d399; animation: pulse 2s infinite; }
-        
-        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
+        /* Animations */
+        .marquee-container { display: flex; overflow: hidden; white-space: nowrap; border-y: 1px solid rgba(255,255,255,0.05); padding: 20px 0; }
+        .marquee-content { display: flex; animation: scroll 60s linear infinite; }
         @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-        .animate-scroll { display: flex; animation: scroll 40s linear infinite; width: max-content; }
+        
+        .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; }
+        .trait-tag { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: #555; border: 1px solid #222; padding: 5px 10px; border-radius: 5px; }
     </style>
 </head>
 <body>
 
     <div id="cursor"></div>
-    <div id="cursor-blur"></div>
+    <div id="glow"></div>
 
-    <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 glass-card px-8 py-3 flex gap-8 text-[10px] font-bold tracking-[0.2em] uppercase items-center">
-        <a href="#home" class="hover:text-blue-500 transition">Home</a>
-        <a href="#stats" class="hover:text-blue-500 transition">Metrics</a>
-        <a href="#projects" class="hover:text-blue-500 transition">Systems</a>
-        <a href="mailto:gourhvishal25@gmail.com" class="text-blue-500 border-l border-white/10 pl-8">Initiate</a>
-    </nav>
-
-    <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-6">
-        <div data-aos="zoom-in" class="mb-8 relative">
-            <div class="absolute inset-0 bg-blue-600 blur-[100px] opacity-20"></div>
-            <img src="https://github.com/vishalgourh.png" class="w-36 h-36 rounded-[40px] border border-white/10 relative z-10 rotate-6 hover:rotate-0 transition-all duration-500">
-            <div class="absolute -bottom-2 -right-2 bg-black border border-white/10 px-3 py-1 rounded-full text-[10px] font-bold flex items-center gap-2">
-                <span class="status-dot"></span> AVAILABLE FOR SAAS
-            </div>
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 relative">
+        <div data-aos="zoom-in" class="mb-10">
+            <img src="https://github.com/vishalgourh.png" class="w-32 h-32 rounded-3xl border border-white/20 shadow-[0_0_80px_rgba(0,122,255,0.2)] rotate-3">
         </div>
-        <h1 data-aos="fade-up" class="text-7xl md:text-[120px] font-black tracking-tighter leading-none mb-6">
-            SaaS <br><span class="gradient-text italic">Architect.</span>
-        </h1>
-        <p data-aos="fade-up" data-aos-delay="200" class="max-w-2xl text-gray-500 text-lg md:text-xl font-medium leading-relaxed">
-            Engineering high-revenue logic systems. B.Tech CST Specialist focused on AI Automation and SQL Infrastructure at SAGE University.
-        </p>
+        <h1 data-aos="fade-up" class="text-6xl md:text-9xl font-black tracking-tighter mb-6">ARCHITECT<span class="text-blue-500">.</span></h1>
+        <p data-aos="fade-up" data-aos-delay="200" class="text-gray-400 max-w-2xl text-lg font-medium">B.Tech CST @ SAGE University. Specializing in AI-driven SaaS logic and high-performance database architectures.</p>
+        
+        <div class="flex gap-10 mt-12 text-xs font-bold tracking-widest text-blue-500">
+            <div data-aos="fade-up">01. SCALABILITY</div>
+            <div data-aos="fade-up" data-aos-delay="100">02. AUTOMATION</div>
+            <div data-aos="fade-up" data-aos-delay="200">03. REVENUE</div>
+        </div>
     </section>
 
-    <div class="py-12 border-y border-white/5 bg-white/[0.01] overflow-hidden">
-        <div class="animate-scroll whitespace-nowrap flex items-center">
-            <span class="text-4xl font-black px-12 opacity-10">UNICOIN LOGIC</span>
-            <span class="text-4xl font-black px-12 opacity-10 text-blue-500">AI AUTOMATION</span>
-            <span class="text-4xl font-black px-12 opacity-10">SQL OPTIMIZATION</span>
-            <span class="text-4xl font-black px-12 opacity-10 text-green-500">REVENUE DRIVEN</span>
-            <span class="text-4xl font-black px-12 opacity-10">SAAS ARCHITECTURE</span>
-            <span class="text-4xl font-black px-12 opacity-10">POWER BI INTEL</span>
-            <span class="text-4xl font-black px-12 opacity-10 text-blue-500">SCALABLE BACKEND</span>
+    <div class="marquee-container bg-white/[0.02]">
+        <div class="marquee-content">
+            <span class="px-10 text-xl font-bold opacity-20 italic">AI AGENT DEPLOYMENT •</span>
+            <span class="px-10 text-xl font-bold opacity-20 italic">SQL OPTIMIZATION •</span>
+            <span class="px-10 text-xl font-bold opacity-20 italic text-blue-500">ZERO-COST INFRASTRUCTURE •</span>
+            <span class="px-10 text-xl font-bold opacity-20 italic">BILLION-DOLLAR VISION •</span>
+            <span class="px-10 text-xl font-bold opacity-20 italic text-green-500">DATA INTEGRITY •</span>
+            <span class="px-10 text-xl font-bold opacity-20 italic text-blue-500">PYTHON SCRIPTS •</span>
+            <span class="px-10 text-xl font-bold opacity-20 italic">SAAS MVP •</span>
+            <span class="px-10 text-xl font-bold opacity-20 italic">AI AGENT DEPLOYMENT •</span>
+            <span class="px-10 text-xl font-bold opacity-20 italic text-blue-500">SQL OPTIMIZATION •</span>
         </div>
     </div>
 
-    <section id="stats" class="max-w-7xl mx-auto py-32 px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div data-aos="fade-up" class="glass-card p-10 border-l-4 border-blue-500">
-            <h3 class="text-4xl font-black mb-2">99.9%</h3>
-            <p class="text-sm font-bold text-blue-500 mb-4 uppercase tracking-widest">Logic Efficiency</p>
-            <p class="text-gray-500 text-xs leading-relaxed">Developing code optimized for low latency and high-concurrency environments, perfect for SaaS scaling.</p>
-        </div>
-        <div data-aos="fade-up" data-aos-delay="100" class="glass-card p-10 border-l-4 border-green-500">
-            <h3 class="text-4xl font-black mb-2">ZERO</h3>
-            <p class="text-sm font-bold text-green-500 mb-4 uppercase tracking-widest">Investment Startups</p>
-            <p class="text-gray-500 text-xs leading-relaxed">Architecting complex software using open-source ecosystems to maximize profit margins for founders.</p>
-        </div>
-        <div data-aos="fade-up" data-aos-delay="200" class="glass-card p-10 border-l-4 border-purple-500">
-            <h3 class="text-4xl font-black mb-2">1B+</h3>
-            <p class="text-sm font-bold text-purple-500 mb-4 uppercase tracking-widest">Scalability Focus</p>
-            <p class="text-gray-500 text-xs leading-relaxed">Designing database schemas (SQL) that handle massive data growth without performance degradation.</p>
-        </div>
+    <section class="max-w-7xl mx-auto py-24 px-6">
+        <h2 class="text-xs font-black text-blue-500 mb-10 tracking-[0.5em] uppercase">Core Professionalism Grid</h2>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4" id="traits-container">
+            </div>
     </section>
 
-    <section class="max-w-7xl mx-auto py-20 px-6">
-        <h2 class="text-xs font-bold text-blue-500 tracking-[0.4em] uppercase mb-12">Professional Core</h2>
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
-            <div data-aos="flip-up" class="glass-card p-6 text-center text-[10px] font-black uppercase">💡 Problem Solver</div>
-            <div data-aos="flip-up" class="glass-card p-6 text-center text-[10px] font-black uppercase text-blue-400">⚡ Rapid Execution</div>
-            <div data-aos="flip-up" class="glass-card p-6 text-center text-[10px] font-black uppercase">🤝 Client Focused</div>
-            <div data-aos="flip-up" class="glass-card p-6 text-center text-[10px] font-black uppercase text-green-400">💰 ROI Driven</div>
-            <div data-aos="flip-up" class="glass-card p-6 text-center text-[10px] font-black uppercase">🛡️ Secure Coding</div>
-            <div data-aos="flip-up" class="glass-card p-6 text-center text-[10px] font-black uppercase">🤖 AI Enthusiast</div>
-            <div data-aos="flip-up" class="glass-card p-6 text-center text-[10px] font-black uppercase text-purple-400">📈 Growth Mindset</div>
-            <div data-aos="flip-up" class="glass-card p-6 text-center text-[10px] font-black uppercase">📱 iOS Aesthetic</div>
-            <div data-aos="flip-up" class="glass-card p-6 text-center text-[10px] font-black uppercase text-pink-400">🔥 Startup DNA</div>
-            <div data-aos="flip-up" class="glass-card p-6 text-center text-[10px] font-black uppercase">💎 Premium Quality</div>
+    <section id="projects" class="max-w-7xl mx-auto py-24 px-6">
+        <div class="flex justify-between items-end mb-16">
+            <div>
+                <h2 class="text-5xl font-black tracking-tighter">Systems.</h2>
+                <p class="text-blue-500 font-bold mt-2 text-xs uppercase tracking-widest">Live Repositories Sync</p>
+            </div>
+            <div class="text-right text-[10px] text-gray-700 font-bold">GITHUB API V3 / SSL SECURE</div>
         </div>
-    </section>
-
-    <section id="projects" class="max-w-7xl mx-auto py-32 px-6 text-center">
-        <h2 class="text-5xl font-black mb-4 tracking-tighter">System Deployments.</h2>
-        <p class="text-gray-500 mb-16">Direct synchronization with GitHub Repositories</p>
         
-        <div id="repo-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="col-span-full py-20 text-gray-700 animate-pulse uppercase font-bold tracking-widest text-xs">
-                Authenticating & Fetching Real-time Repositories...
+        <div id="github-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="col-span-full py-20 border border-dashed border-white/10 rounded-3xl text-center text-gray-700 font-bold italic">
+                Scanning vishalgourh/repositories...
             </div>
         </div>
     </section>
 
-    <footer class="py-20 border-t border-white/5 text-center">
-        <div class="flex justify-center gap-10 text-3xl text-gray-600 mb-12">
-            <a href="https://www.linkedin.com/in/vishal-gourh" class="hover:text-blue-500 transition"><i class="fab fa-linkedin"></i></a>
+    <footer class="py-20 border-t border-white/5 text-center px-6">
+        <div class="flex justify-center gap-10 mb-10 text-2xl text-gray-500">
             <a href="https://github.com/vishalgourh" class="hover:text-white transition"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/vishal-gourh" class="hover:text-blue-500 transition"><i class="fab fa-linkedin"></i></a>
             <a href="mailto:gourhvishal25@gmail.com" class="hover:text-red-500 transition"><i class="fas fa-envelope"></i></a>
         </div>
-        <p class="text-[10px] font-black text-gray-800 tracking-[0.5em] uppercase mb-4">Indore • Madhya Pradesh • 2026 Edition</p>
-        <p class="text-[10px] text-gray-500 uppercase">Built for Billion-Dollar Success</p>
-    </footer>
+        <p class="text-[10px] font-black text-gray-800 tracking-[1em] uppercase">Indore • Madhya Pradesh • SAGE 2028</p>
+    </footer
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -128,62 +98,73 @@
 
         // Mouse Physics
         const cursor = document.getElementById('cursor');
-        const blur = document.getElementById('cursor-blur');
+        const glow = document.getElementById('glow');
         document.addEventListener('mousemove', (e) => {
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
-            blur.style.left = (e.clientX - 200) + 'px';
-            blur.style.top = (e.clientY - 200) + 'px';
+            glow.style.left = (e.clientX - 300) + 'px';
+            glow.style.top = (e.clientY - 300) + 'px';
         });
 
-        // Click Effect
-        document.addEventListener('mousedown', () => cursor.style.transform = 'scale(0.7)');
-        document.addEventListener('mouseup', () => cursor.style.transform = 'scale(1)');
+        // Feature 41-80: Generating Positive Traits Dynamically to fill space professionally
+        const traits = [
+            "ROI Driven", "Secure Logic", "Rapid MVP", "Clean Code", "Startup DNA", 
+            "Scalable SQL", "AI Native", "Performance First", "Growth Focused", "Modular Design",
+            "Cloud Sync", "UX Obsessed", "Ethical AI", "Logic Architect", "Future Ready",
+            "Zero Bug Policy", "High Latency Control", "Database Integrity", "Creative Dev", "Indore Based",
+            "SAGE Tech", "Visionary Architect", "Full Stack Vision", "Agile Mindset", "Team Collaborator",
+            "API Specialist", "Revenue Engine", "Prompt Engineer", "System Optimizer", "Billion-Scale Design",
+            "iOS Aesthetic", "Premium Quality", "Deep Learning", "Automation Lead", "Founder Mindset",
+            "Tech Explorer", "Consistent Coder", "Impactful Work", "Result Oriented", "Global Standards"
+        ];
 
-        // STRICT GITHUB API INTEGRATION
-        async function fetchGitHubSystems() {
-            const grid = document.getElementById('repo-grid');
-            const username = 'vishalgourh';
-            
+        const traitsContainer = document.getElementById('traits-container');
+        traits.forEach(trait => {
+            const div = document.createElement('div');
+            div.className = 'glass-card p-4 text-[9px] font-black text-center uppercase tracking-widest text-gray-600 hover:text-blue-500';
+            div.setAttribute('data-aos', 'fade-up');
+            div.innerText = trait;
+            traitsContainer.appendChild(div);
+        });
+
+        // Feature 81-100: STRICT GITHUB FETCH
+        async function syncGitHub() {
+            const grid = document.getElementById('github-grid');
             try {
-                const response = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=12`);
-                const repos = await response.json();
-                grid.innerHTML = ''; // Delete any dummy data
-
-                if (repos.length === 0) {
-                    grid.innerHTML = '<p class="col-span-full text-gray-600">No public systems deployed yet.</p>';
-                    return;
-                }
+                const res = await fetch('https://api.github.com/users/vishalgourh/repos?sort=updated&per_page=12');
+                const repos = await res.json();
+                grid.innerHTML = ''; // Clear strict
 
                 repos.forEach(repo => {
-                    if (!repo.fork) { // Only original work
+                    if(!repo.fork) {
                         const card = `
-                        <div class="glass-card p-10 flex flex-col justify-between text-left group" data-aos="fade-up">
+                        <div class="glass-card p-10 flex flex-col justify-between" data-aos="fade-up">
                             <div>
-                                <div class="flex justify-between items-center mb-8">
-                                    <span class="text-[10px] font-black uppercase px-3 py-1 bg-blue-500/10 text-blue-500 rounded-full border border-blue-500/20">
-                                        ${repo.language || 'Logical System'}
-                                    </span>
-                                    <i class="fab fa-github text-gray-800 group-hover:text-blue-500 transition duration-500"></i>
+                                <div class="flex justify-between mb-8">
+                                    <span class="text-[9px] font-black bg-blue-500/10 text-blue-500 px-3 py-1 rounded-md border border-blue-500/20">${repo.language || 'CORE LOGIC'}</span>
+                                    <span class="text-[9px] text-gray-700 font-bold uppercase tracking-tighter">v2.0.4</span>
                                 </div>
-                                <h3 class="text-2xl font-bold mb-4 tracking-tighter">${repo.name}</h3>
-                                <p class="text-xs text-gray-500 leading-relaxed h-12 overflow-hidden mb-6">
-                                    ${repo.description || 'Architecting complex logic flow and enterprise-grade backend infrastructure.'}
+                                <h3 class="text-xl font-bold mb-4 tracking-tighter uppercase">${repo.name.replace(/-/g, ' ')}</h3>
+                                <p class="text-xs text-gray-500 leading-relaxed h-12 overflow-hidden mb-6 italic">
+                                    ${repo.description || 'Implementing complex backend protocols and strategic software architecture.'}
                                 </p>
                             </div>
-                            <div class="flex justify-between items-center pt-8 border-t border-white/5">
-                                <span class="text-[10px] font-bold text-gray-700">STARS: ${repo.stargazers_count}</span>
-                                <a href="${repo.html_url}" target="_blank" class="text-xs font-black text-blue-500 hover:tracking-widest transition-all">DECODE SRC →</a>
+                            <div class="pt-6 border-t border-white/5 flex justify-between items-center">
+                                <div class="flex gap-4 text-[10px] text-gray-700 font-bold">
+                                    <span>STARS: ${repo.stargazers_count}</span>
+                                    <span>FORKS: ${repo.forks_count}</span>
+                                </div>
+                                <a href="${repo.html_url}" target="_blank" class="text-blue-500 font-black text-[10px] hover:tracking-[0.2em] transition-all">DECODE →</a>
                             </div>
                         </div>`;
                         grid.innerHTML += card;
                     }
                 });
-            } catch (err) {
-                grid.innerHTML = '<p class="col-span-full text-red-500">API Connection Offline.</p>';
+            } catch (e) {
+                grid.innerHTML = '<p class="col-span-full text-red-900 font-black">SYSTEM OFFLINE: CHECK API CONNECTION</p>';
             }
         }
-        fetchGitHubSystems();
+        syncGitHub();
     </script>
 </body>
 </html>

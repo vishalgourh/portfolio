@@ -3,91 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vishal Gourh | AI & SaaS Specialist</title>
+    <title>Vishal Gourh | AI & SaaS Architect</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --ios-blue: #007AFF; --ios-bg: #000000; }
-        body { background-color: var(--ios-bg); color: white; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; scroll-behavior: smooth; }
-        .glass-card { background: rgba(255, 255, 255, 0.04); backdrop-filter: blur(25px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 30px; transition: 0.3s; }
-        .glass-card:hover { border-color: var(--ios-blue); background: rgba(255, 255, 255, 0.07); }
-        .profile-img { width: 140px; height: 140px; border-radius: 50%; border: 3px solid var(--ios-blue); object-fit: cover; box-shadow: 0 0 40px rgba(0, 122, 255, 0.4); }
-        .btn-primary { background: var(--ios-blue); border-radius: 14px; transition: 0.3s; }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0, 122, 255, 0.3); }
+        :root { --ios-blue: #007AFF; --ios-bg: #030303; }
+        body { 
+            background-color: var(--ios-bg); 
+            background-image: radial-gradient(circle at 10% 20%, rgba(0, 122, 255, 0.1) 0%, transparent 40%),
+                              radial-gradient(circle at 90% 80%, rgba(52, 211, 153, 0.05) 0%, transparent 40%);
+            color: white; 
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif; 
+            scroll-behavior: smooth; 
+        }
+        .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(30px); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 32px; transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .glass-card:hover { border-color: var(--ios-blue); transform: scale(1.02); background: rgba(255, 255, 255, 0.06); }
+        .profile-img { width: 160px; height: 160px; border-radius: 50%; border: 4px solid var(--ios-blue); box-shadow: 0 0 50px rgba(0, 122, 255, 0.3); }
+        .premium-btn { background: linear-gradient(180deg, #007AFF 0%, #0056B3 100%); border-radius: 18px; box-shadow: 0 4px 15px rgba(0, 122, 255, 0.3); transition: 0.3s; }
+        .premium-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0, 122, 255, 0.5); }
+        .tag { background: rgba(255, 255, 255, 0.1); padding: 4px 12px; border-radius: 10px; font-size: 12px; border: 1px solid rgba(255, 255, 255, 0.1); }
     </style>
 </head>
-<body class="p-6 md:p-12">
+<body class="p-4 md:p-10">
 
-    <header class="max-w-4xl mx-auto text-center mt-10">
-        <div class="mb-8 flex justify-center">
-            <img id="gh-avatar" src="https://github.com/vishalgourh.png" alt="Vishal Gourh" class="profile-img">
+    <nav class="max-w-6xl mx-auto flex justify-between items-center py-6">
+        <div class="text-2xl font-bold tracking-tighter italic">VG<span class="text-blue-500">.</span></div>
+        <div class="flex gap-6 text-sm font-medium text-gray-400">
+            <a href="#projects" class="hover:text-white transition">Projects</a>
+            <a href="#services" class="hover:text-white transition">Services</a>
+            <a href="mailto:gourhvishal25@gmail.com" class="text-blue-500">Get in touch</a>
         </div>
-        <h1 class="text-5xl md:text-6xl font-black mb-4 tracking-tight">Vishal Gourh</h1>
-        <p class="text-xl md:text-2xl text-blue-400 font-medium mb-6">AI & SaaS Software Architect</p>
-        <p class="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed mb-10">
-            Building high-performance automation tools and enterprise SaaS applications. Expert in SQL, Power BI, and Python-driven AI solutions.
+    </nav>
+
+    <header class="max-w-5xl mx-auto text-center mt-12 mb-24">
+        <div class="flex justify-center mb-8 relative">
+            <div class="absolute inset-0 bg-blue-500 blur-[80px] opacity-20 rounded-full"></div>
+            <img src="https://github.com/vishalgourh.png" alt="Vishal Gourh" class="profile-img relative z-10">
+        </div>
+        <h1 class="text-6xl md:text-8xl font-black mb-6 tracking-tight leading-tight">
+            Building the <br><span class="text-blue-500 italic">SaaS Future.</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed mb-10">
+            Founder & AI Software Architect. Expert in **Python Automation, SQL Architecture**, and **Power BI Analytics**.
         </p>
-        
-        <div class="flex flex-wrap justify-center gap-4">
-            <a href="mailto:gourhvishal25@gmail.com" class="btn-primary px-8 py-4 font-bold flex items-center gap-2">
-                <i class="fas fa-envelope"></i> Hire Me
-            </a>
-            <a href="https://www.linkedin.com/in/vishal-gourh" target="_blank" class="glass-card px-8 py-4 font-bold flex items-center gap-2">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
+        <div class="flex justify-center gap-4">
+            <a href="mailto:gourhvishal25@gmail.com" class="premium-btn px-10 py-5 font-bold text-lg">Start a Project</a>
+            <a href="https://www.linkedin.com/in/vishal-gourh" class="glass-card px-10 py-5 font-bold flex items-center gap-2 text-lg">LinkedIn</a>
         </div>
     </header>
 
-    <section class="max-w-6xl mx-auto py-20">
-        <h2 class="text-3xl font-bold mb-12 text-center">My Professional Expertise</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="glass-card p-10">
-                <i class="fas fa-magic text-blue-500 text-3xl mb-6"></i>
-                <h3 class="text-2xl font-bold mb-4">AI Automation</h3>
-                <p class="text-gray-400 leading-relaxed">Custom AI agents and lead generation tools using Python and LLMs to scale your business outreach automatically.</p>
+    <section id="projects" class="max-w-6xl mx-auto py-20">
+        <h2 class="text-4xl font-bold mb-12 flex items-center gap-4">
+            <span class="w-12 h-[2px] bg-blue-500"></span> Featured Systems
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div class="glass-card p-10 flex flex-col justify-between">
+                <div>
+                    <div class="flex gap-2 mb-6">
+                        <span class="tag">Python</span><span class="tag">Groq AI</span><span class="tag">Automation</span>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4">Lyna AI</h3>
+                    <p class="text-gray-400 leading-relaxed mb-8">
+                        Advanced LinkedIn Automation Engine. Extracts profile data and uses LLMs to generate high-conversion outreach messages.
+                    </p>
+                </div>
+                <a href="https://github.com/vishalgourh/Lyna-AI-Lead-Gen" class="text-blue-500 font-bold hover:underline">Explore Architecture →</a>
             </div>
-            <div class="glass-card p-10">
-                <i class="fas fa-chart-pie text-green-500 text-3xl mb-6"></i>
-                <h3 class="text-2xl font-bold mb-4">Data Intelligence</h3>
-                <p class="text-gray-400 leading-relaxed">Advanced SQL database design and Power BI dashboards to help you make data-driven decisions in real-time.</p>
-            </div>
-            <div class="glass-card p-10">
-                <i class="fas fa-rocket text-purple-500 text-3xl mb-6"></i>
-                <h3 class="text-2xl font-bold mb-4">SaaS MVP</h3>
-                <p class="text-gray-400 leading-relaxed">End-to-end software development from logic flow to database architecture for million-dollar startup ideas.</p>
+            <div class="glass-card p-10 flex flex-col justify-between">
+                <div>
+                    <div class="flex gap-2 mb-6">
+                        <span class="tag">SQL</span><span class="tag">Power BI</span><span class="tag">Analytics</span>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4">Smart Electricity Monitor</h3>
+                    <p class="text-gray-400 leading-relaxed mb-8">
+                        Real-time data monitoring system for energy efficiency. Designed robust database logic for surplus tracking.
+                    </p>
+                </div>
+                <a href="#" class="text-blue-500 font-bold hover:underline">View Dashboard →</a>
             </div>
         </div>
     </section>
 
-    <section class="max-w-5xl mx-auto pb-20">
-        <div class="glass-card p-10 flex flex-col md:flex-row items-center gap-12">
-            <div class="flex-1">
-                <span class="text-blue-500 font-bold text-sm tracking-widest uppercase">Latest Project</span>
-                <h3 class="text-4xl font-extrabold mt-2 mb-6">Lyna AI Engine</h3>
-                <p class="text-gray-400 text-lg mb-8 leading-relaxed">
-                    A professional-grade lead generation tool that automates LinkedIn prospecting, profile analysis, and personalized AI messaging.
-                </p>
-                <div class="flex gap-4">
-                    <a href="https://github.com/vishalgourh/Lyna-AI-Lead-Gen" target="_blank" class="text-blue-400 font-bold border-b border-blue-400 pb-1 hover:text-blue-300">View Project Case Study →</a>
+    <section id="services" class="max-w-6xl mx-auto py-20 bg-white/5 rounded-[40px] p-10 md:p-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
+            <div>
+                <h2 class="text-5xl font-bold mb-6">What I solve <br>for clients.</h2>
+                <p class="text-gray-400 text-lg mb-8">Helping startups and enterprises build scalable software from 0 to 1.</p>
+                <div class="space-y-6">
+                    <div class="flex gap-4 items-start">
+                        <i class="fas fa-check-circle text-blue-500 mt-1"></i>
+                        <div>
+                            <h4 class="font-bold">Automated Lead Gen</h4>
+                            <p class="text-sm text-gray-500">Stop wasting time on manual outreach.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <i class="fas fa-check-circle text-blue-500 mt-1"></i>
+                        <div>
+                            <h4 class="font-bold">Database Architecture</h4>
+                            <p class="text-sm text-gray-500">Solid SQL logic for massive scale.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="text-6xl text-gray-700 hidden md:block">
-                <i class="fas fa-microchip"></i>
+            <div class="grid grid-cols-1 gap-6">
+                <div class="glass-card p-8">
+                    <h4 class="text-xl font-bold mb-2">SaaS Development</h4>
+                    <p class="text-gray-400 text-sm italic">MVP to Enterprise Scale</p>
+                </div>
+                <div class="glass-card p-8">
+                    <h4 class="text-xl font-bold mb-2">Business Intelligence</h4>
+                    <p class="text-gray-400 text-sm italic">Power BI & Data Strategy</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="max-w-4xl mx-auto py-10 text-center border-t border-white/5">
-        <h2 class="text-2xl font-bold mb-8">Official Freelancing Profiles</h2>
-        <div class="flex justify-center gap-10 grayscale hover:grayscale-0 transition-all">
-            <a href="https://www.upwork.com/freelancers/~YOUR_ID" target="_blank" class="text-4xl hover:scale-110 transition"><i class="fab fa-upwork text-green-500"></i></a>
-            <a href="https://www.fiverr.com/vishalgourh" target="_blank" class="text-3xl font-black hover:scale-110 transition">Fiverr.</a>
-            <a href="https://github.com/vishalgourh" target="_blank" class="text-4xl hover:scale-110 transition"><i class="fab fa-github"></i></a>
-        </div>
+    <section class="max-w-4xl mx-auto py-32 text-center">
+        <h2 class="text-5xl font-bold mb-8">Ready to build your next big thing?</h2>
+        <a href="mailto:gourhvishal25@gmail.com" class="premium-btn px-12 py-6 text-xl font-black">Hire Vishal Gourh</a>
     </section>
 
-    <footer class="text-center py-10 text-gray-600 text-sm">
-        © 2026 Vishal Gourh | SAGE University | Indore, MP
+    <footer class="text-center py-10 text-gray-700">
+        <p>© 2026 Vishal Gourh | SAGE University | Indore</p>
     </footer>
 
 </body>

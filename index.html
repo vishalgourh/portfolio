@@ -3,25 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vishal Gourh | AI & SaaS Architect</title>
+    <title>Vishal Gourh | AI Architect</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        :root { --ios-blue: #007AFF; --bg: #050505; }
-        body { background-color: var(--bg); color: white; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif; overflow-x: hidden; cursor: none; }
-        
-        #cursor { width: 12px; height: 12px; background: #fff; border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; transition: transform 0.15s ease-out; mix-blend-mode: difference; }
-        .bg-glow { position: fixed; width: 800px; height: 800px; background: radial-gradient(circle, rgba(0,122,255,0.12) 0%, transparent 70%); border-radius: 50%; z-index: -1; pointer-events: none; }
-
-        .glass-card { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(30px); border: 1px solid rgba(255, 255, 255, 0.07); border-radius: 24px; transition: 0.4s cubic-bezier(0.2, 0.8, 0.2, 1); position: relative; overflow: hidden; }
-        .glass-card:hover { transform: translateY(-10px); border-color: var(--ios-blue); background: rgba(255, 255, 255, 0.05); }
-        
-        .gradient-text { background: linear-gradient(135deg, #fff 30%, #007AFF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .stat-badge { background: rgba(0, 122, 255, 0.1); border: 1px solid rgba(0, 122, 255, 0.2); color: #007AFF; padding: 4px 12px; border-radius: 99px; font-size: 0.75rem; font-weight: 700; }
-        
-        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-        .animate-marquee { display: flex; animation: marquee 30s linear infinite; }
+        :root { --ios-blue: #007AFF; --bg: #000; }
+        body { background-color: var(--bg); color: white; font-family: -apple-system, sans-serif; overflow-x: hidden; cursor: none; }
+        #cursor { width: 12px; height: 12px; background: #fff; border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; mix-blend-mode: difference; }
+        .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 24px; transition: 0.4s; }
+        .glass-card:hover { transform: translateY(-10px); border-color: var(--ios-blue); }
+        .bg-glow { position: fixed; width: 600px; height: 600px; background: radial-gradient(circle, rgba(0,122,255,0.15) 0%, transparent 70%); border-radius: 50%; z-index: -1; pointer-events: none; }
     </style>
 </head>
 <body>
@@ -29,87 +21,40 @@
     <div id="cursor"></div>
     <div class="bg-glow" id="glow"></div>
 
-    <nav class="fixed top-0 w-full z-50 bg-black/50 backdrop-blur-md border-b border-white/5 px-6 py-4 flex justify-between items-center">
-        <div class="text-xl font-black tracking-tighter">VISHAL<span class="text-blue-500">.</span>GOURH</div>
-        <div class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest text-gray-400">
-            <a href="#about" class="hover:text-white transition">About</a>
-            <a href="#projects" class="hover:text-white transition">Systems</a>
-            <a href="#traits" class="hover:text-white transition">Traits</a>
-            <a href="mailto:gourhvishal25@gmail.com" class="text-blue-500">Hire Me</a>
+    <header class="min-h-[70vh] flex flex-col justify-center items-center text-center px-6">
+        <div data-aos="zoom-in" class="mb-6">
+            <img src="https://github.com/vishalgourh.png" class="w-32 h-32 rounded-full border-4 border-blue-600 shadow-2xl">
         </div>
-    </nav>
-
-    <header class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
-        <div data-aos="zoom-in" class="relative mb-8">
-            <div class="absolute inset-0 bg-blue-500 blur-[60px] opacity-20"></div>
-            <img src="https://github.com/vishalgourh.png" class="w-32 h-32 rounded-3xl border-2 border-white/10 relative z-10 rotate-3">
-        </div>
-        <h1 data-aos="fade-up" class="text-7xl md:text-9xl font-black mb-6 tracking-tight leading-none">
-            Architecting <br><span class="gradient-text italic">The Future.</span>
-        </h1>
-        <p data-aos="fade-up" data-aos-delay="200" class="text-lg md:text-xl text-gray-500 max-w-2xl font-medium">
-            Turning complex logic into scalable revenue. B.Tech CST Specialist at SAGE University.
-        </p>
+        <h1 data-aos="fade-up" class="text-6xl md:text-8xl font-black mb-4 tracking-tighter">VISHAL GOURH</h1>
+        <p data-aos="fade-up" data-aos-delay="200" class="text-blue-500 font-bold tracking-widest uppercase text-sm">AI & SaaS Software Architect</p>
     </header>
 
-    <div class="py-10 border-y border-white/5 overflow-hidden">
-        <div class="animate-marquee whitespace-nowrap gap-10">
-            <span class="text-2xl font-bold opacity-30 px-4">AI AGENTS</span>
-            <span class="text-2xl font-bold opacity-30 px-4">SQL MASTER</span>
-            <span class="text-2xl font-bold opacity-30 px-4">POWER BI DASHBOARDS</span>
-            <span class="text-2xl font-bold opacity-30 px-4">PYTHON AUTOMATION</span>
-            <span class="text-2xl font-bold opacity-30 px-4">SAAS ARCHITECTURE</span>
-            <span class="text-2xl font-bold opacity-30 px-4">LEAD GEN ENGINE</span>
-            <span class="text-2xl font-bold opacity-30 px-4">SCALABLE LOGIC</span>
-            <span class="text-2xl font-bold opacity-30 px-4">GROQ LLM</span>
-            <span class="text-2xl font-bold opacity-30 px-4">DATABASE DESIGN</span>
-        </div>
-    </div>
-
-    <section id="traits" class="max-w-7xl mx-auto py-24 px-6">
-        <h2 class="text-xs font-bold text-blue-500 uppercase tracking-widest mb-4">Core Principles</h2>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-4" id="trait-grid">
-            <div data-aos="fade-up" class="glass-card p-8">
-                <h4 class="font-bold text-blue-400 mb-2">Unicorn Vision</h4>
-                <p class="text-xs text-gray-500">I build products meant for billion-dollar valuation environments.</p>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="100" class="glass-card p-8">
-                <h4 class="font-bold text-green-400 mb-2">Efficiency Overkill</h4>
-                <p class="text-xs text-gray-500">Code that runs at maximum speed with zero redundant calls.</p>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="200" class="glass-card p-8">
-                <h4 class="font-bold text-purple-400 mb-2">Data Integrity</h4>
-                <p class="text-xs text-gray-500">Solid SQL architecture that ensures zero data loss/theft.</p>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="300" class="glass-card p-8">
-                <h4 class="font-bold text-yellow-400 mb-2">Revenue Focus</h4>
-                <p class="text-xs text-gray-500">Features built to increase conversion and business profit.</p>
+    <section id="projects" class="max-w-7xl mx-auto py-20 px-6">
+        <h2 class="text-4xl font-bold mb-12 flex items-center gap-4">
+            <i class="fab fa-github"></i> Live Repositories
+        </h2>
+        
+        <div id="repo-container" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="col-span-full text-center py-20 text-gray-500 animate-pulse">
+                Establishing Secure Connection to GitHub API...
             </div>
         </div>
     </section>
 
-    <section id="projects" class="max-w-7xl mx-auto py-24 px-6">
-        <h2 class="text-5xl font-black mb-12">System Deployments <span class="text-sm text-blue-500 font-normal ml-4">/Live GitHub Feed</span></h2>
-        <div id="github-projects" class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-            <p class="text-gray-500 animate-pulse">Syncing with GitHub Repositories...</p>
+    <section class="max-w-7xl mx-auto py-20 px-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            <div data-aos="fade-up" class="glass-card p-4 text-center text-[10px] font-bold uppercase tracking-widest text-blue-400">Scalability</div>
+            <div data-aos="fade-up" class="glass-card p-4 text-center text-[10px] font-bold uppercase tracking-widest text-green-400">SQL Logic</div>
+            <div data-aos="fade-up" class="glass-card p-4 text-center text-[10px] font-bold uppercase tracking-widest text-purple-400">AI Agents</div>
+            <div data-aos="fade-up" class="glass-card p-4 text-center text-[10px] font-bold uppercase tracking-widest text-yellow-400">Power BI</div>
+            <div data-aos="fade-up" class="glass-card p-4 text-center text-[10px] font-bold uppercase tracking-widest text-red-400">SaaS MVP</div>
+            <div data-aos="fade-up" class="glass-card p-4 text-center text-[10px] font-bold uppercase tracking-widest text-pink-400">Python</div>
         </div>
     </section>
 
-    <section class="max-w-4xl mx-auto py-32 text-center">
-        <div class="glass-card p-16 border-2 border-blue-500/20">
-            <h2 class="text-5xl font-black mb-6">Let's build a <span class="text-blue-500 italic">Unicorn.</span></h2>
-            <p class="text-gray-400 mb-10">Currently accepting high-impact SaaS and AI projects.</p>
-            <a href="mailto:gourhvishal25@gmail.com" class="bg-blue-600 px-12 py-5 rounded-2xl font-bold text-lg hover:bg-blue-500 transition-all shadow-[0_0_30px_rgba(0,122,255,0.4)]">Initialize Contact</a>
-        </div>
-    </section>
-
-    <footer class="py-10 border-t border-white/5 text-center px-6">
-        <div class="flex justify-center gap-8 mb-6 text-2xl text-gray-500">
-            <a href="https://www.linkedin.com/in/vishal-gourh" class="hover:text-blue-500"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/vishalgourh" class="hover:text-white"><i class="fab fa-github"></i></a>
-            <a href="https://www.upwork.com/freelancers/~YOUR_ID" class="hover:text-green-500"><i class="fab fa-upwork"></i></a>
-        </div>
-        <p class="text-xs font-bold text-gray-700 tracking-widest uppercase">Indore • SAGE University • B.Tech 2028</p>
+    <footer class="py-20 text-center border-t border-white/5">
+        <h3 class="text-3xl font-bold mb-8">Ready to initiate a high-revenue project?</h3>
+        <a href="mailto:gourhvishal25@gmail.com" class="bg-blue-600 px-12 py-4 rounded-xl font-black hover:bg-blue-500 transition-all">Direct Contact</a>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -122,45 +67,60 @@
         document.addEventListener('mousemove', (e) => {
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
-            glow.style.left = (e.clientX - 400) + 'px';
-            glow.style.top = (e.clientY - 400) + 'px';
+            glow.style.left = (e.clientX - 300) + 'px';
+            glow.style.top = (e.clientY - 300) + 'px';
         });
 
-        // GitHub API Fetcher (Strictly only your GitHub projects)
-        async function fetchProjects() {
-            const container = document.getElementById('github-projects');
+        // STRICT GITHUB FETCHING
+        async function fetchRealRepos() {
+            const container = document.getElementById('repo-container');
+            const username = 'vishalgourh';
+            
             try {
-                const res = await fetch('https://api.github.com/users/vishalgourh/repos?sort=updated&per_page=9');
-                const repos = await res.json();
-                container.innerHTML = ''; // Clear loader
+                const response = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=12`);
+                const repos = await response.json();
+                
+                // Sabse pehle loader ko clear karein
+                container.innerHTML = '';
+
+                if (repos.length === 0) {
+                    container.innerHTML = '<p class="col-span-full text-center text-gray-600">No public repositories found for this user.</p>';
+                    return;
+                }
 
                 repos.forEach(repo => {
-                    if(!repo.fork) { // Sirf original projects
+                    // Sirf asli repositories (jo fork nahi hain)
+                    if (!repo.fork) {
                         const card = `
                         <div class="glass-card p-8 flex flex-col justify-between" data-aos="fade-up">
                             <div>
-                                <div class="flex justify-between items-start mb-4">
-                                    <span class="stat-badge">${repo.language || 'Code'}</span>
-                                    <i class="fab fa-github text-xl opacity-20"></i>
+                                <div class="flex justify-between items-center mb-6">
+                                    <span class="text-[10px] bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full font-bold uppercase">${repo.language || 'Software'}</span>
+                                    <i class="fab fa-github text-gray-600 text-xl"></i>
                                 </div>
-                                <h3 class="text-xl font-bold mb-2 truncate">${repo.name}</h3>
-                                <p class="text-xs text-gray-500 leading-relaxed mb-6 h-12 overflow-hidden">
-                                    ${repo.description || 'Professional system logic and architecture implementation.'}
+                                <h3 class="text-xl font-bold mb-3 truncate">${repo.name}</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed mb-6 h-12 overflow-hidden">
+                                    ${repo.description || 'Enterprise-grade system architecture and software logic implementation.'}
                                 </p>
                             </div>
-                            <div class="flex justify-between items-center mt-auto">
-                                <span class="text-[10px] text-gray-600 font-bold uppercase tracking-tighter">Stars: ${repo.stargazers_count}</span>
-                                <a href="${repo.html_url}" target="_blank" class="text-blue-500 text-xs font-bold hover:underline">Source Code →</a>
+                            <div class="pt-6 border-t border-white/5 flex justify-between items-center">
+                                <div class="flex gap-4 text-xs text-gray-600">
+                                    <span><i class="fas fa-star text-yellow-500"></i> ${repo.stargazers_count}</span>
+                                    <span><i class="fas fa-code-branch text-blue-500"></i> ${repo.forks_count}</span>
+                                </div>
+                                <a href="${repo.html_url}" target="_blank" class="text-blue-500 font-bold text-xs hover:underline">View Source →</a>
                             </div>
                         </div>`;
                         container.innerHTML += card;
                     }
                 });
-            } catch (e) {
-                container.innerHTML = '<p class="text-red-500">GitHub Sync Failed. Please check internet.</p>';
+            } catch (error) {
+                console.error("Fetch Error:", error);
+                container.innerHTML = '<p class="col-span-full text-center text-red-500 font-bold">API Sync Error. Refresh to retry.</p>';
             }
         }
-        fetchProjects();
+
+        fetchRealRepos();
     </script>
 </body>
 </html>

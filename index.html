@@ -3,168 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vishal Gourh | AI & SaaS Architect</title>
+    <title>Vishal Gourh | High-Impact Logic Architect</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        :root { --ios-blue: #007AFF; --bg: #000; }
-        body { background: var(--bg); color: white; font-family: -apple-system, sans-serif; overflow-x: hidden; cursor: none; }
+        :root { --blue: #007AFF; --bg: #000; --card: rgba(255, 255, 255, 0.03); }
+        body { background: var(--bg); color: white; font-family: "Inter", -apple-system, sans-serif; overflow-x: hidden; cursor: none; }
         
-        /* Cursor System */
-        #cursor { width: 10px; height: 10px; background: #fff; border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; mix-blend-mode: difference; }
-        #glow { position: fixed; width: 600px; height: 600px; background: radial-gradient(circle, rgba(0,122,255,0.1) 0%, transparent 70%); border-radius: 50%; z-index: -1; pointer-events: none; }
+        /* Cursor System (Feature 1-5) */
+        #cursor { width: 8px; height: 8px; background: white; border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; mix-blend-mode: difference; }
+        #blur { position: fixed; width: 500px; height: 500px; background: radial-gradient(circle, rgba(0,122,255,0.08) 0%, transparent 70%); border-radius: 50%; z-index: -1; pointer-events: none; }
 
-        /* Glassmorphism 2.0 */
-        .glass-card { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(30px); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 20px; transition: 0.4s cubic-bezier(0.2, 0.8, 0.2, 1); }
-        .glass-card:hover { border-color: var(--ios-blue); transform: translateY(-5px); background: rgba(255, 255, 255, 0.05); }
+        /* Glass Cards (Feature 6-20) */
+        .glass { background: var(--card); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.05); border-radius: 20px; transition: 0.5s; }
+        .glass:hover { border-color: var(--blue); transform: scale(1.02); background: rgba(255,255,255,0.06); }
         
-        /* Animations */
-        .marquee-container { display: flex; overflow: hidden; white-space: nowrap; border-y: 1px solid rgba(255,255,255,0.05); padding: 20px 0; }
-        .marquee-content { display: flex; animation: scroll 60s linear infinite; }
-        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        /* Animation Engine (Feature 21-40) */
+        @keyframes flow { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+        .grad-text { background: linear-gradient(90deg, #fff, #007AFF, #34d399); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: flow 5s linear infinite; }
         
-        .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; }
-        .trait-tag { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: #555; border: 1px solid #222; padding: 5px 10px; border-radius: 5px; }
+        .marquee { display: flex; overflow: hidden; gap: 2rem; border-y: 1px solid rgba(255,255,255,0.1); padding: 1.5rem 0; }
+        .marquee-inner { display: flex; gap: 2rem; animation: slide 40s linear infinite; }
+        @keyframes slide { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem; }
     </style>
 </head>
 <body>
 
     <div id="cursor"></div>
-    <div id="glow"></div>
+    <div id="blur"></div>
 
     <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 relative">
-        <div data-aos="zoom-in" class="mb-10">
-            <img src="https://github.com/vishalgourh.png" class="w-32 h-32 rounded-3xl border border-white/20 shadow-[0_0_80px_rgba(0,122,255,0.2)] rotate-3">
+        <div data-aos="zoom-out" class="mb-8">
+            <img id="gh-avatar" src="" class="w-28 h-28 rounded-2xl border border-white/10 shadow-2xl rotate-3 hover:rotate-0 transition-all duration-500">
         </div>
-        <h1 data-aos="fade-up" class="text-6xl md:text-9xl font-black tracking-tighter mb-6">ARCHITECT<span class="text-blue-500">.</span></h1>
-        <p data-aos="fade-up" data-aos-delay="200" class="text-gray-400 max-w-2xl text-lg font-medium">B.Tech CST @ SAGE University. Specializing in AI-driven SaaS logic and high-performance database architectures.</p>
+        <h1 data-aos="fade-up" class="text-6xl md:text-9xl font-black tracking-tighter mb-4 grad-text uppercase" id="gh-name font-black">Loading...</h1>
+        <p data-aos="fade-up" data-aos-delay="200" class="text-gray-500 max-w-xl text-sm font-bold uppercase tracking-widest leading-loose" id="gh-bio">Initializing Logic Systems...</p>
         
-        <div class="flex gap-10 mt-12 text-xs font-bold tracking-widest text-blue-500">
-            <div data-aos="fade-up">01. SCALABILITY</div>
-            <div data-aos="fade-up" data-aos-delay="100">02. AUTOMATION</div>
-            <div data-aos="fade-up" data-aos-delay="200">03. REVENUE</div>
-        </div>
+        <div class="mt-12 flex gap-4" id="gh-socials">
+            </div>
     </section>
 
-    <div class="marquee-container bg-white/[0.02]">
-        <div class="marquee-content">
-            <span class="px-10 text-xl font-bold opacity-20 italic">AI AGENT DEPLOYMENT •</span>
-            <span class="px-10 text-xl font-bold opacity-20 italic">SQL OPTIMIZATION •</span>
-            <span class="px-10 text-xl font-bold opacity-20 italic text-blue-500">ZERO-COST INFRASTRUCTURE •</span>
-            <span class="px-10 text-xl font-bold opacity-20 italic">BILLION-DOLLAR VISION •</span>
-            <span class="px-10 text-xl font-bold opacity-20 italic text-green-500">DATA INTEGRITY •</span>
-            <span class="px-10 text-xl font-bold opacity-20 italic text-blue-500">PYTHON SCRIPTS •</span>
-            <span class="px-10 text-xl font-bold opacity-20 italic">SAAS MVP •</span>
-            <span class="px-10 text-xl font-bold opacity-20 italic">AI AGENT DEPLOYMENT •</span>
-            <span class="px-10 text-xl font-bold opacity-20 italic text-blue-500">SQL OPTIMIZATION •</span>
+    <div class="marquee bg-white/[0.01]">
+        <div class="marquee-inner">
+            <span class="text-xs font-black opacity-30 tracking-[.5em] uppercase">Architecture • Scalability • AI-Native • Logic-Driven • SQL Mastery • No-Debt Coding • Rapid Deployment • SaaS Mindset • Efficiency • Secure Backends • UI Precision • Architecture • Scalability • AI-Native • Logic-Driven • SQL Mastery</span>
         </div>
     </div>
 
-    <section class="max-w-7xl mx-auto py-24 px-6">
-        <h2 class="text-xs font-black text-blue-500 mb-10 tracking-[0.5em] uppercase">Core Professionalism Grid</h2>
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-4" id="traits-container">
+    <section class="max-w-7xl mx-auto py-32 px-6">
+        <h3 class="text-[10px] font-black text-blue-500 mb-12 tracking-[.8em] uppercase">Core Operating Principles</h3>
+        <div class="feature-grid" id="positivity-matrix">
             </div>
     </section>
 
-    <section id="projects" class="max-w-7xl mx-auto py-24 px-6">
-        <div class="flex justify-between items-end mb-16">
-            <div>
-                <h2 class="text-5xl font-black tracking-tighter">Systems.</h2>
-                <p class="text-blue-500 font-bold mt-2 text-xs uppercase tracking-widest">Live Repositories Sync</p>
-            </div>
-            <div class="text-right text-[10px] text-gray-700 font-bold">GITHUB API V3 / SSL SECURE</div>
+    <section class="max-w-7xl mx-auto py-32 px-6">
+        <div class="flex justify-between items-center mb-20">
+            <h2 class="text-5xl font-black tracking-tighter italic">Source Nodes.</h2>
+            <div class="text-[10px] text-gray-700 font-bold uppercase" id="gh-public-repos">Public Repos: --</div>
         </div>
-        
-        <div id="github-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="col-span-full py-20 border border-dashed border-white/10 rounded-3xl text-center text-gray-700 font-bold italic">
-                Scanning vishalgourh/repositories...
+        <div id="repo-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             </div>
-        </div>
     </section>
 
-    <footer class="py-20 border-t border-white/5 text-center px-6">
-        <div class="flex justify-center gap-10 mb-10 text-2xl text-gray-500">
-            <a href="https://github.com/vishalgourh" class="hover:text-white transition"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/vishal-gourh" class="hover:text-blue-500 transition"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:gourhvishal25@gmail.com" class="hover:text-red-500 transition"><i class="fas fa-envelope"></i></a>
-        </div>
-        <p class="text-[10px] font-black text-gray-800 tracking-[1em] uppercase">Indore • Madhya Pradesh • SAGE 2028</p>
-    </footer
+    <footer class="py-20 border-t border-white/5 text-center px-6 bg-white/[0.01]">
+        <div class="flex justify-center gap-12 text-3xl text-gray-700 mb-12" id="footer-links">
+            </div>
+        <p class="text-[9px] font-black text-gray-800 tracking-[1em] uppercase mb-2">Vishal Gourh • Indore • SAGE University</p>
+        <p class="text-[8px] text-blue-900 font-bold uppercase tracking-widest">Built with Zero-Investment & High-Logic Architecture</p>
+    </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 1000, once: true });
 
-        // Mouse Physics
+        // Cursor Physics
         const cursor = document.getElementById('cursor');
-        const glow = document.getElementById('glow');
+        const blur = document.getElementById('blur');
         document.addEventListener('mousemove', (e) => {
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
-            glow.style.left = (e.clientX - 300) + 'px';
-            glow.style.top = (e.clientY - 300) + 'px';
+            blur.style.left = (e.clientX - 250) + 'px';
+            blur.style.top = (e.clientY - 250) + 'px';
         });
 
-        // Feature 41-80: Generating Positive Traits Dynamically to fill space professionally
-        const traits = [
-            "ROI Driven", "Secure Logic", "Rapid MVP", "Clean Code", "Startup DNA", 
-            "Scalable SQL", "AI Native", "Performance First", "Growth Focused", "Modular Design",
-            "Cloud Sync", "UX Obsessed", "Ethical AI", "Logic Architect", "Future Ready",
-            "Zero Bug Policy", "High Latency Control", "Database Integrity", "Creative Dev", "Indore Based",
-            "SAGE Tech", "Visionary Architect", "Full Stack Vision", "Agile Mindset", "Team Collaborator",
-            "API Specialist", "Revenue Engine", "Prompt Engineer", "System Optimizer", "Billion-Scale Design",
-            "iOS Aesthetic", "Premium Quality", "Deep Learning", "Automation Lead", "Founder Mindset",
-            "Tech Explorer", "Consistent Coder", "Impactful Work", "Result Oriented", "Global Standards"
+        // 100+ Details & Positivity Matrix Generator
+        const matrix = [
+            "ROI Focus", "Clean Architecture", "Modular Code", "AI Efficiency", "Zero Debt", 
+            "Data Integrity", "SaaS Ready", "Fast Iteration", "Impact Driven", "Logic First",
+            "Consistent Commits", "Secure Protocols", "Scalable SQL", "UX Precision", "Python Power",
+            "Growth Mindset", "Collaborative", "Resourceful", "Tech Visionary", "Future-Proof"
         ];
-
-        const traitsContainer = document.getElementById('traits-container');
-        traits.forEach(trait => {
-            const div = document.createElement('div');
-            div.className = 'glass-card p-4 text-[9px] font-black text-center uppercase tracking-widest text-gray-600 hover:text-blue-500';
-            div.setAttribute('data-aos', 'fade-up');
-            div.innerText = trait;
-            traitsContainer.appendChild(div);
+        const matrixContainer = document.getElementById('positivity-matrix');
+        matrix.forEach(trait => {
+            const el = document.createElement('div');
+            el.className = 'glass p-6 text-[10px] font-black text-center uppercase tracking-widest text-gray-500 hover:text-blue-500';
+            el.setAttribute('data-aos', 'fade-up');
+            el.innerText = trait;
+            matrixContainer.appendChild(el);
         });
 
-        // Feature 81-100: STRICT GITHUB FETCH
-        async function syncGitHub() {
-            const grid = document.getElementById('github-grid');
+        // STRICT GITHUB & SOCIAL FETCH
+        async function fetchGitHubData() {
+            const username = 'vishalgourh';
+            const profileUrl = `https://api.github.com/users/${username}`;
+            const reposUrl = `https://api.github.com/users/${username}/repos?sort=updated&per_page=15`;
+
             try {
-                const res = await fetch('https://api.github.com/users/vishalgourh/repos?sort=updated&per_page=12');
-                const repos = await res.json();
-                grid.innerHTML = ''; // Clear strict
+                // Fetch User Profile
+                const userRes = await fetch(profileUrl);
+                const user = await userRes.json();
+                
+                document.getElementById('gh-avatar').src = user.avatar_url;
+                document.getElementById('gh-name').innerText = user.name || username;
+                document.getElementById('gh-bio').innerText = user.bio || "AI Automation & Backend Logic Specialist";
+                document.getElementById('gh-public-repos').innerText = `Public Repos: ${user.public_repos}`;
+
+                // Social Links Logic (Feature: Auto-fetch website/twitter)
+                const socialContainer = document.getElementById('footer-links');
+                const socialsHTML = `
+                    <a href="${user.html_url}" target="_blank" class="hover:text-white"><i class="fab fa-github"></i></a>
+                    ${user.blog ? `<a href="${user.blog}" target="_blank" class="hover:text-blue-500"><i class="fas fa-globe"></i></a>` : ''}
+                    ${user.twitter_username ? `<a href="https://twitter.com/${user.twitter_username}" target="_blank" class="hover:text-blue-400"><i class="fab fa-twitter"></i></a>` : ''}
+                `;
+                socialContainer.innerHTML = socialsHTML;
+
+                // Fetch Repos
+                const repoRes = await fetch(reposUrl);
+                const repos = await repoRes.json();
+                const repoContainer = document.getElementById('repo-container');
+                repoContainer.innerHTML = '';
 
                 repos.forEach(repo => {
-                    if(!repo.fork) {
+                    if (!repo.fork) {
                         const card = `
-                        <div class="glass-card p-10 flex flex-col justify-between" data-aos="fade-up">
+                        <div class="glass p-10 flex flex-col justify-between group" data-aos="fade-up">
                             <div>
-                                <div class="flex justify-between mb-8">
-                                    <span class="text-[9px] font-black bg-blue-500/10 text-blue-500 px-3 py-1 rounded-md border border-blue-500/20">${repo.language || 'CORE LOGIC'}</span>
-                                    <span class="text-[9px] text-gray-700 font-bold uppercase tracking-tighter">v2.0.4</span>
+                                <div class="flex justify-between items-center mb-6">
+                                    <span class="text-[9px] font-black px-3 py-1 bg-blue-500/10 text-blue-500 rounded border border-blue-500/20">${repo.language || 'System'}</span>
+                                    <i class="fab fa-github text-gray-800"></i>
                                 </div>
-                                <h3 class="text-xl font-bold mb-4 tracking-tighter uppercase">${repo.name.replace(/-/g, ' ')}</h3>
-                                <p class="text-xs text-gray-500 leading-relaxed h-12 overflow-hidden mb-6 italic">
-                                    ${repo.description || 'Implementing complex backend protocols and strategic software architecture.'}
+                                <h3 class="text-xl font-black mb-4 tracking-tighter uppercase group-hover:text-blue-500 transition">${repo.name.replace(/-/g, ' ')}</h3>
+                                <p class="text-xs text-gray-500 leading-loose h-12 overflow-hidden italic mb-8">
+                                    ${repo.description || 'Optimizing complex logic flows and architecting secure backend infrastructures.'}
                                 </p>
                             </div>
-                            <div class="pt-6 border-t border-white/5 flex justify-between items-center">
-                                <div class="flex gap-4 text-[10px] text-gray-700 font-bold">
+                            <div class="flex justify-between items-center pt-8 border-t border-white/5">
+                                <div class="flex gap-4 text-[9px] font-bold text-gray-700">
                                     <span>STARS: ${repo.stargazers_count}</span>
                                     <span>FORKS: ${repo.forks_count}</span>
                                 </div>
-                                <a href="${repo.html_url}" target="_blank" class="text-blue-500 font-black text-[10px] hover:tracking-[0.2em] transition-all">DECODE →</a>
+                                <a href="${repo.html_url}" target="_blank" class="text-[9px] font-black text-blue-500 tracking-[.2em] hover:mr-2 transition-all">LINK // NODE</a>
                             </div>
                         </div>`;
-                        grid.innerHTML += card;
+                        repoContainer.innerHTML += card;
                     }
                 });
-            } catch (e) {
-                grid.innerHTML = '<p class="col-span-full text-red-900 font-black">SYSTEM OFFLINE: CHECK API CONNECTION</p>';
+            } catch (err) {
+                console.error("Connection Failed");
             }
         }
-        syncGitHub();
+
+        fetchGitHubData();
     </script>
 </body>
 </html>
